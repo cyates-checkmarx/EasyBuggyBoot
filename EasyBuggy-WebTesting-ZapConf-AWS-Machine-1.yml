@@ -26,6 +26,34 @@ jobs:
   rules: []
   name: "passiveScan-config"
   type: "passiveScan-config"
+- parameters: {}
+  name: "passiveScan-wait"
+  type: "passiveScan-wait"
+- parameters:
+    context: "Default Context"
+    user: "test_user"
+    policy: ""
+    maxRuleDurationInMins: 0
+    maxScanDurationInMins: 0
+    addQueryParam: false
+    delayInMs: 0
+    handleAntiCSRFTokens: false
+    injectPluginIdInHeader: false
+    scanHeadersAllRequests: false
+    threadPerHost: 10
+  policyDefinition:
+    defaultStrength: "medium"
+    defaultThreshold: "medium"
+    rules: []
+  name: "activeScan"
+  type: "activeScan"
+- parameters:
+    template: "traditional-pdf"
+    reportDir: ""
+    reportTitle: "ZAP Scanning Report"
+    reportDescription: ""
+  name: "report-pdf"
+  type: "report"
 # - parameters: {}
 #   tests:
 #   - onFail: "INFO"
