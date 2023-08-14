@@ -26,41 +26,41 @@ jobs:
   rules: []
   name: "passiveScan-config"
   type: "passiveScan-config"
-- parameters: {}
-  tests:
-  - onFail: "INFO"
-    statistic: "automation.spider.urls.added"
-    #site: ""
-    operator: ">="
-    value: 1
-    type: "stats"
-    name: "At least 1 URL found"
-  name: "spider"
-  type: "spider"
-- parameters: {}
-  tests:
-  - onFail: "INFO"
-    statistic: "spiderAjax.urls.added"
-    #site: ""
-    operator: ">="
-    value: 1
-    type: "stats"
-    name: "At least 1 URL found"
-  name: "spiderAjax"
-  type: "spiderAjax"
-- parameters: {}
-  name: "passiveScan-wait"
-  type: "passiveScan-wait"
-- parameters: {}
-  policyDefinition:
-    rules: []
-  name: "activeScan"
-  type: "activeScan"
-- parameters:
-    template: "traditional-json-plus"
-    reportDir: "C:\\ZAP CLI\\Reports"
-    reportTitle: "ZAP Scanning Report"
-    reportDescription: ""
-  name: "report"
-  type: "report"
+# - parameters: {}
+#   tests:
+#   - onFail: "INFO"
+#     statistic: "automation.spider.urls.added"
+#     #site: ""
+#     operator: ">="
+#     value: 1
+#     type: "stats"
+#     name: "At least 1 URL found"
+#   name: "spider"
+#   type: "spider"
+# - parameters: {}
+#   tests:
+#   - onFail: "INFO"
+#     statistic: "spiderAjax.urls.added"
+#     #site: ""
+#     operator: ">="
+#     value: 1
+#     type: "stats"
+#     name: "At least 1 URL found"
+#   name: "spiderAjax"
+#   type: "spiderAjax"
+# - parameters: {}
+#   name: "passiveScan-wait"
+#   type: "passiveScan-wait"
+# - parameters: {}
+#   policyDefinition:
+#     rules: []
+#   name: "activeScan"
+#   type: "activeScan"
+# - parameters:
+#     template: "traditional-json-plus"
+#     reportDir: "C:\\ZAP CLI\\Reports"
+#     reportTitle: "ZAP Scanning Report"
+#     reportDescription: ""
+#   name: "report"
+#   type: "report"
 
