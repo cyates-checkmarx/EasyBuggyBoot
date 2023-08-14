@@ -26,17 +26,17 @@ jobs:
   rules: []
   name: "passiveScan-config"
   type: "passiveScan-config"
-# - parameters: {}
-#   tests:
-#   - onFail: "INFO"
-#     statistic: "automation.spider.urls.added"
-#     #site: ""
-#     operator: ">="
-#     value: 1
-#     type: "stats"
-#     name: "At least 1 URL found"
-#   name: "spider"
-#   type: "spider"
+- parameters: {}
+  tests:
+  - onFail: "INFO"
+    statistic: "automation.spider.urls.added"
+    #site: ""
+    operator: ">="
+    value: 1
+    type: "stats"
+    name: "At least 1 URL found"
+  name: "spider"
+  type: "spider"
 # - parameters: {}
 #   tests:
 #   - onFail: "INFO"
