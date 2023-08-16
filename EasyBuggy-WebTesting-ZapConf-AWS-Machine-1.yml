@@ -48,19 +48,19 @@ jobs:
 #     name: "At least 1 URL found"
 #   name: "spiderAjax"
 #   type: "spiderAjax"
-# - parameters: {}
-#   name: "passiveScan-wait"
-#   type: "passiveScan-wait"
+- parameters: {}
+  name: "passiveScan-wait"
+  type: "passiveScan-wait"
 - parameters: {}
   policyDefinition:
     rules: []
   name: "activeScan"
   type: "activeScan"
 - parameters:
-    template: "traditional-json-plus"
+    template: "traditional-pdf"
     reportDir: "C:\\ZAP CLI\\Reports"
     reportTitle: "ZAP Scanning Report"
     reportDescription: ""
-  name: "report"
+  name: "report-pdf"
   type: "report"
 
