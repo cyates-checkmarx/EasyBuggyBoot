@@ -51,11 +51,11 @@ jobs:
 # - parameters: {}
 #   name: "passiveScan-wait"
 #   type: "passiveScan-wait"
-# - parameters: {}
-#   policyDefinition:
-#     rules: []
-#   name: "activeScan"
-#   type: "activeScan"
+- parameters: {}
+  policyDefinition:
+    rules: []
+  name: "activeScan"
+  type: "activeScan"
 - parameters:
     template: "traditional-json-plus"
     reportDir: "C:\\ZAP CLI\\Reports"
