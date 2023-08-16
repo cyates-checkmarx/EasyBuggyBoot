@@ -56,11 +56,11 @@ jobs:
 #     rules: []
 #   name: "activeScan"
 #   type: "activeScan"
-# - parameters:
-#     template: "traditional-json-plus"
-#     reportDir: "C:\\ZAP CLI\\Reports"
-#     reportTitle: "ZAP Scanning Report"
-#     reportDescription: ""
-#   name: "report"
-#   type: "report"
+- parameters:
+    template: "traditional-json-plus"
+    reportDir: "C:\\ZAP CLI\\Reports"
+    reportTitle: "ZAP Scanning Report"
+    reportDescription: ""
+  name: "report"
+  type: "report"
 
