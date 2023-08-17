@@ -2,8 +2,9 @@
 env:
   contexts:
   - name: "Default Context"
-    urls: ["http://testing-easybuggy.default/eb/v1/"]
-    includePaths: []
+    urls: []
+    includePaths:
+    - "http://easybuggy.default/"
     excludePaths: []
     authentication:
       parameters: {}
@@ -11,9 +12,13 @@ env:
         method: "response"
         pollFrequency: 60
         pollUnits: "requests"
+        pollUrl: ""
+        pollPostData: ""
     sessionManagement:
       method: "cookie"
       parameters: {}
+    technology:
+      exclude: []
   parameters:
     failOnError: true
     failOnWarning: false
@@ -23,31 +28,37 @@ jobs:
 - parameters:
     scanOnlyInScope: true
     enableTags: false
+    disableAllRules: false
   rules: []
   name: "passiveScan-config"
   type: "passiveScan-config"
-# - parameters: {}
-#   tests:
-#   - onFail: "INFO"
-#     statistic: "automation.spider.urls.added"
-#     #site: ""
-#     operator: ">="
-#     value: 1
-#     type: "stats"
-#     name: "At least 1 URL found"
-#   name: "spider"
-#   type: "spider"
-# - parameters: {}
-#   tests:
-#   - onFail: "INFO"
-#     statistic: "spiderAjax.urls.added"
-#     #site: ""
-#     operator: ">="
-#     value: 1
-#     type: "stats"
-#     name: "At least 1 URL found"
-#   name: "spiderAjax"
-#   type: "spiderAjax"
+- parameters: {}
+  name: "spider"
+  type: "spider"
+  tests:
+  - onFail: "INFO"
+    statistic: "automation.spider.urls.added"
+    site: ""
+    operator: ">="
+    value: 100
+    type: "stats"
+    name: "At least 100 URLs found"
+- parameters:
+    maxDuration: 60
+    maxCrawlDepth: 10
+    numberOfBrowsers: 20
+    inScopeOnly: true
+    excludedElements: []
+  name: "spiderAjax"
+  type: "spiderAjax"
+  tests:
+  - onFail: "INFO"
+    statistic: "spiderAjax.urls.added"
+    site: ""
+    operator: ">="
+    value: 100
+    type: "stats"
+    name: "At least 100 URLs found"
 - parameters: {}
   name: "passiveScan-wait"
   type: "passiveScan-wait"
